@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link  rel="stylesheet" href="css/common.css">
+    <!--css-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link  rel="stylesheet" href="third/bootstrap-4.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!--  // css-->
+    <title>逍遥游</title>
+</head>
+<body>
+<!--header start-->
+<div class="header container">
+    <div class="reg_login_menu">
+        <ul> <li><a href="account.html">注册</a></li>
+            <!-- 用于打开模态框 -->
+            <li><a id="quickLogin" data-toggle="modal" data-target="#myModal" href="">登录</a></li>
+            <li><a href="LoginOutAction?curUrl=news.jsp">注销</a></li>
+            <li><a id="checkSendNews"  data-toggle="modal" data-target="#sendNewsModal">发布</a></li>
+            <!-- 模态框 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">快速登录</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <div id="qk_login_form">
+                                <form action="">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                                        <input class="form-control" validate="true" type="text" name="loginEmail" placeholder="邮箱地址">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock"></i></span></div>
+                                        <input class="form-control" validate="true" type="password" name="loginPwd" placeholder="密码">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <input class="form-control" type="submit" value="登录">
+                                    <div id="qk_agreeAutoLogin" class="agree"><input type="checkbox" name="agree" value="1"><label>一周内自动登录</label> <a href="#">忘记密码</a></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="gallery.html">景色</a></li>
+            <li><a href="method.html">攻略</a></li>
+            <li><a href=""> </a></li>
+            <li><a href="hotel.html">酒店</a></li>
+            <li><a href="food.html">美食</a></li>
+            <li><a href=""> </a></li>
+        </ul>
+    </div>
+    <div class="logo"><img src="images/logo.png" alt="logo";width="100"height="100"></div>
+    <div class="search">
+        <form action="" method="get">
+            <input type="search" name="keyword" id="keyword" value="" placeholder="关键字">
+            <input type="submit" value="">
+        </form>
+    </div>
+</div>
+<!--header end-->
+<!--banner start-->
+<div class="banner container-full"></div>
+<!--banner end-->
+<!--&lt;!&ndash;home start&ndash;&gt;-->
+<!--<div class="method">-->
+<!--   <div class="page1">-->
+<!--       <h2>如何到达</h2>-->
+<!--    <p>1.桂林两江机场(三字代码:KWL)现已开通直飞大多数城市的航班其中全新的T2航站楼将在今年9月底投入使用。距桂林市中心28公里打的约100元。开往市区的机场大巴有多条线路其中开往桂林北站为20元耗时1小时平均间隔1-1.5小时发车一班;开往阳县城汽车站的大巴为50元每天来回8班。<br/>-->
+<!--    2.桂林站又名桂林南站主要停靠K字头、T字头、Z字头的普通列车位于市区途径或始发公交线路较多交通相对方便。桂林站距离桂林北站约9公里乘坐公交1路、100路、K99路耗时约50分钟可实现两个火车站之间的换乘。<br/>-->
+<!--    3.桂林北站是湘桂高铁和贵广高铁的中间站开往广州方向、贵州方向的动车组较多距离市区约10公里换乘公交1路或32路可去往桂林市区方向。<br/>-->
+<!--    4.桂林西站在桂林北站的西北方向故而距离市区会更远有条件的尽量选择桂林站或北站。<br/>-->
+<!--    5.【阳朔站】这个高铁站并不在阳朔县城而是在兴坪镇出站后左手边大巴售票处购票前往兴坪镇客运站只需要5元前往40公里以外的阳朔县城为20元具体发车时间表看下文。<br/>-->
+<!--    乘坐高铁直接前往阳朔站还是很方便的就周边来说成都方向(7小时)、重庆方向(5小时)、贵阳方向(3小时)、广州方向(2小时)的动车组列车还是蛮多的。<br/>-->
+<!--    (再说一遍!阳朔站不在阳朔县城距离还有40公里需要换乘大巴车继续前往下面两涨图片分别拍摄于阳朔高铁站旁边的汽车站售票窗口及阳朔开往桂林机场的大巴上)-->
+<!--    每年5-10月是游览桂林的最佳时间，因为这个时间段降雨少，气候宜人，江水水量适中，适合泛舟漓江。但是“五一”和“十一”两个黄金周是旅游的高峰期，住宿预订和交通也较紧张，价格比平时也会有所上涨，建议最好避开这个时间。<p>-->
+<!--    <div class="img"><img src="images/11.jpeg" alt="桂林山水" ></div>-->
+<!--    <h3>Tips：</h3>-->
+<!--    <P>1、桂林4月为初春，要备一件冲锋衣，挡风又保暖。<br/>-->
+<!--     2、5月下旬进入雨季，漓江水位会涨，水流急且浑浊，不利于看倒影，但此时气温不高，下雨时较凉爽，还能一品烟雨漓江的飘渺梦幻。<br/>-->
+<!--     3、5-6月的桂林为丰水、多雨、潮湿，尽管每日的最高温度都在32度左右，但因湿度极大，雨季闷热，最好穿清凉衣服。<br/>-->
+<!--     4、7-8月盛夏时节，注意防晒。桂林山水多，最好穿平底鞋游玩。带上防蚊虫的药水。<br/>-->
+<!--     5、推荐5条游玩桂林的路线，如果你即将启程去桂林或者想去桂林，那么这篇攻略值得你收藏！<P>-->
+<!--   </div>-->
+<!--    <div class="page1">-->
+<!--        <h3>1. 来桂林旅游的人均费用大概多少？</h3>-->
+<!--        <P>来桂林游玩几天，游览的景点，住的酒店，出游的方式决定费用问题，所以无法给明确的价格，但是可以和大家稍微说一下，给大家提供参考。游玩4天左右参加散客跟团游的价格大概在800~1000元/人左右。-->
+<!--        <h3>2. 林旅游会宰客和强制消费吗？</h3>-->
+<!--        <P>桂林是个著名的旅游城市，全市的经济支柱就是旅游产业，所以在桂林会有一些不良人员从事这个行业，一般来说不建议没有提前预定在桂林包团出游，这样受骗的机率很大。因为在火车站或机场出口也会有很多人进行低价揽客，然后再将客人转卖，其中会有很多隐形消费陷阱。所以说建议提前确定好行程，规定的时间会有工作人员进行接待安排，这样的方式更安全和稳妥。-->
+<!--        <h3>3. 桂林玩法推荐？</h3>-->
+<!--        <P> 桂林的景点，以市中心为中点，均匀分布在东南西北各处，而各处景点间又没有直通线路，所以出发去各地都得先行返回桂林之后再出发前往其他景点。-->
+<!--        桂林的出游方式有三种：散客跟团游、独立包车游、自助和自驾车游。<br/>-->
+<!--        散客跟团游：<br/>-->
+<!--         价格实惠，但旅游不自由，各处景点走马观花。<br/>-->
+<!--        独立包车游：<br/>-->
+<!--         游览方式更为自由、轻松，行程可根据自己的喜好制定。<br/>-->
+<!--        自助游和自驾车游：<br/>-->
+<!--         深受年轻人喜爱，可以按照自己的计划出游。<br/>-->
+
+<!--    </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;home end&ndash;&gt;-->
+<!--content-->
+<div id="news" class="mb-5">
+    <div class="container-fluid">
+        <!--新闻头部-->
+        <div class="row">
+            <div class="col-12 news_header text-center mt-3 mb-5">
+                <h1>攻略</h1>
+                <h6>最新攻略</h6>
+            </div>
+        </div>
+        <!--新闻头部-->
+
+        <!--新闻内容模板-->
+        <div class="row  mb-2"><!--lg-->
+            <div class="col-lg-6 ajaxRefresh">
+                <div class="container-fluid">
+                    <div class="row mb-2"><!--sm-->
+                        <div class="col-sm-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 news_img text-center">
+                                        <img src="images/11.jpeg" class="m-auto" alt="/"width="100"height="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 newsContent">
+                                        <div>
+                                            <a class="nav-link" href="#" data-toggle="modal" data-target="#newsModal">
+                                                <h5> 标题</h5></a>
+                                        </div>
+                                        <p class="refreshDetail">摘要</p>
+                                        <div class="hiddenCotent" style="display:none"></div><!-- 位置很重要 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--sm-->
+                </div>
+            </div>
+
+            <div class="col-lg-6 ajaxRefresh">
+                <div class="container-fluid">
+                    <div class="row mb-2"><!--sm-->
+                        <div class="col-sm-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 news_img text-center">
+                                        <img src="images/11.jpeg" class="m-auto" alt="/"width="100"height="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 newsContent">
+                                        <div>
+                                            <a class="nav-link" href="#" data-toggle="modal" data-target="#newsModal">
+                                                <h5> 标题</h5></a>
+                                        </div>
+                                        <p class="refreshDetail">摘要</p>
+                                        <div class="hiddenCotent" style="display:none"></div><!-- 位置很重要 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--sm-->
+                </div>
+            </div>
+        </div>
+        <div class="row  mb-2"><!--lg-->
+            <div class="col-lg-6 ajaxRefresh">
+                <div class="container-fluid">
+                    <div class="row mb-2"><!--sm-->
+                        <div class="col-sm-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 news_img text-center">
+                                        <img src="images/11.jpeg" class="m-auto" alt="/"width="100"height="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 newsContent">
+                                        <div>
+                                            <a class="nav-link" href="#" data-toggle="modal" data-target="#newsModal">
+                                                <h5> 标题</h5></a>
+                                        </div>
+                                        <p class="refreshDetail">摘要</p>
+                                        <div class="hiddenCotent" style="display:none"></div><!-- 位置很重要 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--sm-->
+                </div>
+            </div>
+
+            <div class="col-lg-6 ajaxRefresh">
+                <div class="container-fluid">
+                    <div class="row mb-2"><!--sm-->
+                        <div class="col-sm-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 news_img text-center">
+                                        <img src="images/11.jpeg" class="m-auto" alt="/"width="100"height="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 newsContent">
+                                        <div>
+                                            <a class="nav-link" href="#" data-toggle="modal" data-target="#newsModal">
+                                                <h5> 标题</h5></a>
+                                        </div>
+                                        <p class="refreshDetail">摘要</p>
+                                        <div class="hiddenCotent" style="display:none"></div><!-- 位置很重要 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--sm-->
+                </div>
+            </div>
+        </div>
+        <!--新闻内容模板-->
+
+        <!-- 浏览新闻模态框 模板-->
+        <div class="modal fade" id="newsModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- 模态框头部 -->
+                    <div class="modal-header">
+                        <h3 class="modal-title mx-auto">攻略浏览</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- 模态框主体 -->
+                    <div class="modal-body">
+                        <div class="" id="newsContentModal"></div>
+                    </div>
+                    <!-- 模态框底部 -->
+
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> 评论</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //浏览新闻模态框模板 -->
+
+        <!-- 发布新闻模态框 -->
+        <div class="modal fade" id="sendNewsModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- 模态框头部 -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">攻略发布</h4>
+                        <button type="button" class="close"
+                                data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- 模态框主体 -->
+                    <div class="modal-body">
+                        <form id="newsForm">
+                            <p id="newsUeditor"><!--百度富文本编辑器--></p>
+                            <input type="hidden" id="newContent" name="newContent">
+                            <input id="newsImg" name="newsImg" type="hidden">
+                            <a  id="selectImg">选择图片</a><img id="preview" class="newsImg" src="images/img19.jpg">
+                            <script type="text/javascript" id="upload_ue"></script>
+                            <div class="input-group mt-2 mb-2">
+                                <div class="input-group-prepend">
+                                    <sapn class="input-group-text"><i class="fa fa-tripadvisor fa-fw"></i></sapn>
+                                </div>
+                                <input id="title" name="title" class="form-control" placeholder="攻略标题" type="text" tabindex="1">
+                            </div>
+                            <div class="input-group mt-2 mb-2">
+                                <div class="input-group-prepend">
+                                    <sapn class="input-group-text"><i class="fa fa-list fa-fw"></i></sapn>
+                                </div>
+                                <input id="detail" name="detail" class="form-control" placeholder="攻略摘要" type="text" tabindex="2">
+                            </div>
+                            <div class="justify-content-center text-center">
+                                <input id="sendNews"  type="button" class="btn btn-secondary" data-dismiss="modal" value="发布攻略">
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- //发布新闻模态框 -->
+
+        <!--分页导航-->
+        <div class="row mt-5">
+            <div class="col-12">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center" id="pagination"></ul>
+                </nav>
+            </div>
+        </div>
+        <!--分页导航-->
+
+    </div>
+</div>
+
+<!--//content-->
+<!--footer start-->
+<div class="footer">
+    <div class="container">
+        <div >copyright @ 计本一班44号陈采妮版权所有 闽ICP证 111111号.</div>
+        <div>
+            <a href="">微信</a>
+            <a href="">QQ</a>
+            <a href="">微博</a>
+        </div>
+    </div>
+</div>
+<!--footer end-->
+<!--js-->
+<script src="third/jquery-3.3.1.js"></script>
+<script src="third/bootstrap-4.1.3-dist/js/bootstrap.bundle.js"></script>
+<script src="third/MD5.js"></script>
+<script src="third/twbs-pagination-master/jquery.twbsPagination.js"></script>
+<script type="text/javascript" charset="utf-8" src="third/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="third/ueditor/ueditor.all.js"></script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="third/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="third/MD5.js"></script>
+<script src="js/news.js"></script>
+<!--//js-->
+</body>
+</html></html>

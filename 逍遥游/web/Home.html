@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link  rel="stylesheet" href="css/common.css">
+    <!--css-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link  rel="stylesheet" href="third/bootstrap-4.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!--  // css-->
+    <title>逍遥游</title>
+</head>
+<body>
+<!--header start-->
+<div class="header container">
+    <div class="reg_login_menu">
+        <ul> <li><a href="account.html">注册</a></li>
+            <!-- 用于打开模态框 -->
+            <li><a id="quickLogin" data-toggle="modal" data-target="#myModal" href="">登录</a></li>
+            <!-- 模态框 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">快速登录</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <div id="qk_login_form">
+                                <form action="">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                                        <input class="form-control" validate="true" type="text" name="loginEmail" placeholder="邮箱地址">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock"></i></span></div>
+                                        <input class="form-control" validate="true" type="password" name="loginPwd" placeholder="密码">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <input class="form-control" type="submit" value="登录">
+                                    <div id="qk_agreeAutoLogin" class="agree"><input type="checkbox" name="agree" value="1"><label>一周内自动登录</label> <a href="#">忘记密码</a></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="gallery.html">景色</a></li>
+            <li><a href="method.html">攻略</a></li>
+            <li><a href=""> </a></li>
+            <li><a href="hotel.html">酒店</a></li>
+            <li><a href="food.html">美食</a></li>
+            <li><a href=""> </a></li>
+        </ul>
+    </div>
+    <div class="logo"><img src="images/logo.png" alt="logo";width="100"height="100"></div>
+    <div class="search">
+        <form action="" method="get">
+            <input type="search" name="keyword" id="keyword" value="" placeholder="关键字">
+            <input type="submit" value="">
+        </form>
+    </div>
+</div>
+<!--header end-->
+<!--banner start-->
+<div class="banner container-full"></div>
+<!--banner end-->
+<!--home start-->
+<div class="Home">
+    <h2>桂林山水甲天下</h2>
+    <p>阳朔堪称甲桂林。群峰倒影山浮水无山无水不入神。”近代爱国人士吴迈的这首诗将桂林山水描绘的淋漓尽致。
+        阳朔作为来桂林旅游必到的重要一站无论是其自然风光还是风土人情亦或是那垂涎已久的啤酒鱼大餐都值得多住上几日。
+        西街作为游客的聚集区每到夜幕降临更是热闹非凡由于阳朔的欧美游客较多酒吧自然是必不可少。</p>
+    <div class="img">
+        <img src="images/1.jpeg" alt="桂林山水" ></div>
+    <p>相公山作为兴坪镇的一处冷门景点,一定不能错过。登顶的瞬间才会有种豁然开朗的感觉,
+        连绵的山脉、蜿蜒的漓江、广阔的蓝天,尽收眼底,“会当凌绝顶,一览众山小”,只是此处除了山,还有绝美漓江。</p>
+    <div class="img"><img src="images/2.jpeg" alt="桂林山水" ></div>
+    <p>搭着竹排畅游在江中,凉风习习,看两旁群山退去,耳边不禁回荡起儿时唱的一首童歌。碧水蓝天下,呼吸着新鲜的空气,尽情拥抱着美丽的大自然,一切都显得那么诗情画意。</p>
+    <div class="img"><img src="images/3.jpeg" alt="桂林山水" ></div>
+    <p> 桂林千古情以当地历史文化为背景,用一段段故事和表演向游客诉说着阳朔、诉说着桂林。</p>
+    <div class="img"><img src="images/4.jpeg" alt="桂林山水" ></div>
+    <p>傍晚是个赏景的好时间,夕阳、远山、漓江、归鸟,每一处风景都让人啧啧称赞。
+        手揣二十元钱来此合影,风景与手中的钱反复对比,也是映了小学课本的那句“桂林山水甲天下,绝妙漓江秋泛图”。</p>
+    <div class="img">
+        <img src="images/5.jpeg" alt="桂林山水" ></div>
+    <p>一条老街一段历史叙说着几代人的故事经过岁月的淘洗时光的冲刷阳朔西街仍以其独特的魅力散发着迷人的光芒接纳着全国各地的游客乃至欧美背包客这就是阳朔西街。</p>
+
+</div>
+<!--home end-->
+<!--footer start-->
+<div class="footer container-full">
+    <div class="container">
+        <div >copyright @ 计本一班44号陈采妮版权所有 闽ICP证 111111号.</div>
+        <div>
+            <a href="">微信</a>
+            <a href="">QQ</a>
+            <a href="">微博</a>
+        </div>
+    </div>
+</div>
+<!--footer end-->
+<!--js-->
+<script src="third/jquery-3.3.1.js"></script>
+<script src="third/bootstrap-4.1.3-dist/js/bootstrap.bundle.js"></script>
+<script src="third/MD5.js"></script>
+<script src="js/common.js"></script>
+<!--//js-->
+</body>
+</html>

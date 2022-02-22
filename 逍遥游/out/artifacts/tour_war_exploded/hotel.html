@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link  rel="stylesheet" href="css/common.css">
+    <!--css-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link  rel="stylesheet" href="third/bootstrap-4.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!--  // css-->
+    <title>逍遥游</title>
+</head>
+<body>
+<!--header start-->
+<div class="header container">
+    <div class="reg_login_menu">
+        <ul> <li><a href="account.html">注册</a></li>
+            <!-- 用于打开模态框 -->
+            <li><a id="quickLogin" data-toggle="modal" data-target="#myModal" href="">登录</a></li>
+            <!-- 模态框 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">快速登录</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <div id="qk_login_form">
+                                <form action="">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                                        <input class="form-control" validate="true" type="text" name="loginEmail" placeholder="邮箱地址">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock"></i></span></div>
+                                        <input class="form-control" validate="true" type="password" name="loginPwd" placeholder="密码">
+                                        <div class="input-group-append"><span class="input-group-text"><i class="fa fa-hand-o-left"></i></span></div>
+                                    </div>
+                                    <div></div>
+                                    <input class="form-control" type="submit" value="登录">
+                                    <div id="qk_agreeAutoLogin" class="agree"><input type="checkbox" name="agree" value="1"><label>一周内自动登录</label> <a href="#">忘记密码</a></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="gallery.html">景色</a></li>
+            <li><a href="method.html">攻略</a></li>
+            <li><a href=""> </a></li>
+            <li><a href="hotel.html">酒店</a></li>
+            <li><a href="food.html">美食</a></li>
+            <li><a href=""> </a></li>
+        </ul>
+    </div>
+    <div class="logo"><img src="images/logo.png" alt="logo";width="100"height="100"></div>
+    <div class="search">
+        <form action="" method="get">
+            <input type="search" name="keyword" id="keyword" value="" placeholder="关键字">
+            <input type="submit" value="">
+        </form>
+    </div>
+</div>
+<!--header end-->
+<!--banner start-->
+<div class="banner container-full"></div>
+<!--banner end-->
+<!--home start-->
+<div class="hotel">
+<h3>璟象酒店——俯览春晚主场象鼻山</h3>
+    <p>180度俯瞰象鼻山, 无敌江景。 如果你问当地人哪里可以在白天和黑夜都欣赏到桂林不一样的美，答案一定是桂林璟象酒店。
+        桂林市区那么多酒店，只想推荐这家。坐落于漓江之畔，房间内象鼻山触手可及，酒店的露台餐厅是观赏象鼻山的最佳场所，这家餐厅据说还是求婚率高达99.9%的浪漫餐厅。</p>
+    <p>实用信息：
+        地址：桂林市象山区滨江路8号
+        价格区间：614-1500元/晚/间
+        </p>
+    <div class="img"><img src="images/41.jpeg" alt="璟象酒店" ></div>
+</div>
+<div class="hotel">
+    <h3>阳朔酒店推荐：遇源景舍——住在阳朔最美山水中</h3>
+    <p>遇龙河边 ；住在风景里的房间； 适合亲子。
+        这是一家一站式酒店，不管你是以什么样的缘由来到这里，你都会忍不住想留下来。你可以在书吧看书喝茶，你可以自己做手作、草木染。
+        这里还是孩子们的天堂，这里还是回归乡野的农家驿站。每到重要节假日的时候还会有特色演出。与其说这是一家酒店，还不如说这是一个旅行目的地。</p>
+    <p>实用信息：
+        地址：十里画廊蝴蝶泉旁200米龙角山下
+        价格区间：448-1150元/晚/间
+        </p>
+    <div class="img"><img src="images/42.jpeg" alt="阳朔酒店" ></div>
+</div>
+<div class="hotel">
+    <h3>兴坪酒店推荐：闲云居——20元人民币风景中的田园生活</h3>
+    <p>20元人民币风景区； 小岛田园生活 。
+        闲云居，位于桂林兴坪古镇，漓水河畔，20元人民币元宝山下。
+        这里是桂林首批十佳“金宿级”民宿。跟其他民宿不同的是，它在一座孤岛上，所以前往时需要坐船。
+        这里的体验活动很丰富，清晨你可以到摄影师必去的相公山拍摄最美的漓江全景， 午餐后，结伴徒步或者骑行，穿过竹林清幽的小路。
+        这里有着“全国十大最震撼观星地”，晚上坐在闲云居的星空露台，躺在躺椅上，数着星星，品酒聊天。</p>
+    <p>实用信息：
+        地址：阳朔兴坪镇镰刀湾村
+        价格区间：400-1200元/晚/间</p>
+    <div class="img"><img src="images/43.jpeg" alt="兴坪酒店" ></div>
+</div>
+<!--home end-->
+<!--footer start-->
+<div class="footer container-full">
+    <div class="container">
+        <div >copyright @ 计本一班44号陈采妮版权所有 闽ICP证 111111号.</div>
+        <div>
+            <a href="">微信</a>
+            <a href="">QQ</a>
+            <a href="">微博</a>
+        </div>
+    </div>
+</div>
+<!--footer end-->
+<!--js-->
+<script src="third/jquery-3.3.1.js"></script>
+<script src="third/bootstrap-4.1.3-dist/js/bootstrap.bundle.js"></script>
+<script src="third/MD5.js"></script>
+<script src="js/common.js"></script>
+<!--//js-->
+</body>
+</html>
